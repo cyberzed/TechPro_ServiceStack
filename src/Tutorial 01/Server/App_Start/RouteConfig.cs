@@ -9,6 +9,8 @@ namespace cyberzed.TechPro.ServiceStack_01.Server.App_Start
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+			routes.IgnoreRoute("api/{*pathInfo}");
+
 			routes.MapRoute(
 				name: "Default",
 				url: "{controller}/{action}/{id}",
