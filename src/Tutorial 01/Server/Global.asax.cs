@@ -14,6 +14,8 @@ namespace cyberzed.TechPro.ServiceStack_01.Server
 
 			FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+			new AppHost().Init();
 		}
 	}
 }
