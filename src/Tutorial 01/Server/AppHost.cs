@@ -5,7 +5,7 @@ namespace cyberzed.TechPro.ServiceStack_01.Server
 {
 	public class AppHost : AppHostBase
 	{
-		public AppHost() : base("TechPro ServiceStack Tutorial 01", typeof (AppHost).Assembly)
+		public AppHost() : base("TechPro ServiceStack Tutorial", typeof (AppHost).Assembly)
 		{
 		}
 
