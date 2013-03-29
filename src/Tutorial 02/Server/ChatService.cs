@@ -73,7 +73,7 @@ namespace cyberzed.TechPro.ServiceStack_02.Server
 			return new HttpResult(HttpStatusCode.OK);
 		}
 
-		[EnableCors]
+		[EnableCors("http://www.tech.pro", "GET,OPTIONS")]
 		public void Options(ChatMessage request)
 		{
 		}

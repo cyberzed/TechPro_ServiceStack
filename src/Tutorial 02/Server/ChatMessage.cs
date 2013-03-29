@@ -2,7 +2,7 @@
 
 namespace cyberzed.TechPro.ServiceStack_02.Server
 {
-	[Route("/messages", "POST")]
+	[Route("/messages", "POST,OPTIONS")]
 	[Route("/messages/{Id}", "GET,PUT,DELETE")]
 	[Route("/messages/mailbox/{Receiver}", "GET")]
 	public class ChatMessage
