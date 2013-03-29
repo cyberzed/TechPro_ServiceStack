@@ -51,8 +51,7 @@ namespace cyberzed.TechPro.ServiceStack_02.Server
 		{
 			if (request == null) throw new ArgumentNullException("request");
 
-			if (request.Id == default(int))
-				throw new ArgumentException("Can not update without an Id");
+			if (request.Id == default(int)) throw new ArgumentException("Can not update without an Id");
 
 			messages.RemoveAll(cm => cm.Id == request.Id);
 
@@ -65,8 +64,7 @@ namespace cyberzed.TechPro.ServiceStack_02.Server
 		{
 			if (request == null) throw new ArgumentNullException("request");
 
-			if (request.Id == default(int))
-				throw new ArgumentException("Can not delete without an Id");
+			if (request.Id == default(int)) throw new ArgumentException("Can not delete without an Id");
 
 			messages.RemoveAll(cm => cm.Id == request.Id);
 
