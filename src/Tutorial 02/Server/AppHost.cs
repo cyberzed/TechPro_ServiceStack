@@ -1,7 +1,9 @@
 ﻿using Funq;
+using ServiceStack.CacheAccess;
+using ServiceStack.CacheAccess.Providers;
 using ServiceStack.WebHost.Endpoints;
 
-namespace cyberzed.TechPro.ServiceStack_01.Server
+namespace cyberzed.TechPro.ServiceStack_02.Server
 {
 	public class AppHost : AppHostBase
 	{
@@ -15,6 +17,8 @@ namespace cyberzed.TechPro.ServiceStack_01.Server
 				{
 					ServiceStackHandlerFactoryPath = "api"
 				});
+
+			container.Register<ICacheClient>(new MemoryCacheClient());
 		}
 	}
 }

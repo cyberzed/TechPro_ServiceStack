@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace cyberzed.TechPro.ServiceStack_01.Server.App_Start
+namespace cyberzed.TechPro.ServiceStack_02.Server.App_Start
 {
 	public class FilterConfig
 	{
