@@ -1,6 +1,8 @@
 ﻿using Funq;
 using ServiceStack.CacheAccess;
 using ServiceStack.CacheAccess.Providers;
+using ServiceStack.Common;
+using ServiceStack.ServiceHost;
 using ServiceStack.WebHost.Endpoints;
 
 namespace cyberzed.TechPro.ServiceStack_02.Server
@@ -15,8 +17,11 @@ namespace cyberzed.TechPro.ServiceStack_02.Server
 		{
 			SetConfig(new EndpointHostConfig
 				{
-					ServiceStackHandlerFactoryPath = "api"
+					ServiceStackHandlerFactoryPath = "api",
+					EnableFeatures = Feature.All.Remove(Feature.Soap).Remove(Feature.Csv)
 				});
+
+			CsvFormatter.Register(this);
 
 			container.Register<ICacheClient>(new MemoryCacheClient());
 		}
