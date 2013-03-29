@@ -70,7 +70,7 @@ namespace cyberzed.TechPro.ServiceStack_02.Server
 
 			messages.RemoveAll(cm => cm.Id == request.Id);
 
-			return new HttpResult(HttpStatusCode.OK);
+			return new HttpResult(HttpStatusCode.NoContent);
 		}
 
 		[EnableCors("http://www.tech.pro", "GET,OPTIONS")]
